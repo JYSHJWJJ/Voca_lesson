@@ -33,38 +33,57 @@ a.lesson:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .bar>i{display:block;height:100%;background:var(--good);border-radius:99px}
 .prog b{color:var(--ink);font-variant-numeric:tabular-nums}
 .empty{color:var(--muted);text-align:center;padding:28px 12px;background:var(--surface);border:1px dashed var(--line);border-radius:14px}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin:0 0 14px;padding-bottom:2px}
+.tab{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:99px;padding:8px 14px;font:inherit;font-size:14px;font-weight:800;cursor:pointer;position:relative}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tab .dot{position:absolute;top:4px;right:6px;width:8px;height:8px;border-radius:50%;background:#e0533d}
+.bookhead{display:flex;align-items:baseline;gap:8px;margin:0 0 10px}
+.bookhead b{font-size:16px}
+.bookhead span{font-size:13px;color:var(--muted)}
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1><span>준이 단어장</span></h1>
-  <p class="sub">Voca 10000 · Words in English</p>
+  <p class="sub">책을 고르고 레슨을 눌러 공부해요</p>
+  <div class="tabs" id="tabs" role="tablist" hidden></div>
+  <div class="bookhead" id="bookhead"></div>
   <div class="list" id="list"><div class="empty">레슨을 불러오는 중이에요…</div></div>
 </div>
 <script>
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
-let lessons=[];
-function seen(){try{return JSON.parse(localStorage.getItem('seen-lessons')||'[]');}catch(e){return [];}}
+let books=[],cur=null;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function seen(){try{return JSON.parse(localStorage.getItem('seen-lessons')||'[]').map(String);}catch(e){return [];}}
+function known(id){try{const st=JSON.parse(localStorage.getItem('l'+id+'-study-v1')||'{}');return Object.keys(st.known||{}).length;}catch(e){return 0;}}
+function isNew(l,s){return !s.includes(String(l.id))&&known(l.id)===0;}
 function render(){
-  if(!lessons.length)return;
+  if(!books.length)return;
   const s=seen();
-  document.getElementById('list').innerHTML=lessons.map(l=>{
-    let known=0;
-    try{const st=JSON.parse(localStorage.getItem('l'+l.n+'-study-v1')||'{}');known=Object.keys(st.known||{}).length;}catch(e){}
-    const isNew=!s.includes(l.n)&&known===0;
-    return `<a class="lesson" href="lesson.html?l=${l.n}" data-n="${l.n}">
-      <div class="top"><b>Lesson ${l.n}</b>${isNew?'<span class="new">NEW</span>':''}<span class="go">공부하기 →</span></div>
-      <p class="words" lang="en">${l.preview}</p>
-      <div class="prog"><span>외운 단어</span><div class="bar"><i style="width:${known/l.count*100}%"></i></div><b>${known} / ${l.count}</b></div>
-    </a>`;}).join('');
+  if(!books.find(b=>b.id===cur))cur=(books.find(b=>b.lessons.length)||books[0]).id;
+  const tabs=document.getElementById('tabs');
+  tabs.hidden=books.length<2;
+  tabs.innerHTML=books.map(b=>`<button class="tab" role="tab" data-book="${esc(b.id)}" aria-selected="${b.id===cur}">${esc(b.tab||b.title)}${b.lessons.some(l=>isNew(l,s))&&b.id!==cur?'<span class="dot" aria-label="새 레슨"></span>':''}</button>`).join('');
+  const b=books.find(x=>x.id===cur);
+  document.getElementById('bookhead').innerHTML=`<b>${esc(b.title)}</b>${b.note?`<span>${esc(b.note)}</span>`:''}`;
+  document.getElementById('list').innerHTML=b.lessons.length?b.lessons.map(l=>{
+    const k=known(l.id);
+    return `<a class="lesson" href="lesson.html?l=${encodeURIComponent(l.id)}" data-id="${esc(l.id)}">
+      <div class="top"><b>Lesson ${l.n}</b>${isNew(l,s)?'<span class="new">NEW</span>':''}<span class="go">공부하기 →</span></div>
+      <p class="words" lang="en">${esc(l.preview)}</p>
+      <div class="prog"><span>외운 단어</span><div class="bar"><i style="width:${k/l.count*100}%"></i></div><b>${k} / ${l.count}</b></div>
+    </a>`;}).join(''):'<div class="empty">아직 레슨이 없어요.</div>';
 }
 document.addEventListener('click',e=>{
+  const t=e.target.closest('.tab');
+  if(t){cur=t.dataset.book;try{localStorage.setItem('book-tab',cur);}catch(err){}render();return;}
   const a=e.target.closest('a.lesson');if(!a)return;
-  try{const s=seen();const n=+a.dataset.n;if(!s.includes(n)){s.push(n);localStorage.setItem('seen-lessons',JSON.stringify(s));}}catch(err){}
+  try{const s=seen();const id=a.dataset.id;if(!s.includes(id)){s.push(id);localStorage.setItem('seen-lessons',JSON.stringify(s));}}catch(err){}
 });
+try{cur=localStorage.getItem('book-tab');}catch(e){}
 fetch('lessons/index.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error();return r.json();}).then(d=>{
-  lessons=d.lessons;render();
-  lessons.forEach(l=>fetch('lessons/'+l.n+'.json').catch(()=>{}));
+  books=d.books||[];render();
+  books.forEach(b=>b.lessons.forEach(l=>fetch('lessons/'+l.id+'.json').catch(()=>{})));
 }).catch(()=>{
   document.getElementById('list').innerHTML='<div class="empty">레슨 목록을 불러오지 못했어요.<br>인터넷에 연결한 뒤 다시 열어 주세요.</div>';
 });

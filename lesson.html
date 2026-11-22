@@ -157,7 +157,7 @@ h2{font-size:17px;margin:20px 0 8px}
 <div class="wrap">
   <header class="top">
     <a class="back" href="index.html">← 레슨 목록</a>
-    <div class="eyebrow">VOCA 10000 · WORDS IN ENGLISH</div>
+    <div class="eyebrow" id="book">VOCA 10000 · WORDS IN ENGLISH</div>
     <h1 id="ltitle">단어 공부</h1>
     <div class="prog"><span>외운 단어</span><div class="bar"><i id="pbar"></i></div><b id="ptxt">0 / 20</b></div>
   </header>
@@ -410,7 +410,7 @@ document.addEventListener('submit',e=>{
 });
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
 fetch('lessons/'+L+'.json').then(r=>{if(!r.ok)throw new Error();return r.json();}).then(d=>{
-  W=d.words;document.title=d.title+' 단어 공부';$('#ltitle').textContent=d.title+' 단어 공부';
+  W=d.words;if(d.book)$('#book').textContent=d.book.toUpperCase();document.title=d.title+' 단어 공부';$('#ltitle').textContent=d.title+' 단어 공부';
   show();prefetchAudio();
 }).catch(()=>{
   document.querySelector('main').innerHTML='<div class="empty">레슨을 불러오지 못했어요.<br>인터넷에 연결한 뒤 다시 열어 주세요.</div>';

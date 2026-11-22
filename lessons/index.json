@@ -1,19 +1,35 @@
 {
- "lessons": [
+ "books": [
   {
-   "n": 20,
-   "count": 20,
-   "preview": "procedure, application, clumsy, conductor, contour …"
+   "id": "voca11000",
+   "title": "Voca 11000",
+   "tab": "Voca 11000",
+   "lessons": []
   },
   {
-   "n": 19,
-   "count": 20,
-   "preview": "shine, single, believe, soldier, spirit …"
-  },
-  {
-   "n": 18,
-   "count": 20,
-   "preview": "invest, laboratory, lift, low, mathematics …"
+   "id": "voca10000",
+   "title": "Voca 10000 · Words in English",
+   "lessons": [
+    {
+     "id": "20",
+     "n": 20,
+     "count": 20,
+     "preview": "procedure, application, clumsy, conductor, contour …"
+    },
+    {
+     "id": "19",
+     "n": 19,
+     "count": 20,
+     "preview": "shine, single, believe, soldier, spirit …"
+    },
+    {
+     "id": "18",
+     "n": 18,
+     "count": 20,
+     "preview": "invest, laboratory, lift, low, mathematics …"
+    }
+   ],
+   "tab": "Voca 10000"
   }
  ]
 }
