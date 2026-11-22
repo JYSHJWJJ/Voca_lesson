@@ -1,0 +1,177 @@
+{
+ "n": 20,
+ "title": "Lesson 20",
+ "words": [
+  {
+   "w": "procedure",
+   "p": "n",
+   "s": 1,
+   "ko": "절차",
+   "d": "the usual or correct way for doing something",
+   "e": "What's the procedure for making a complaint?",
+   "f": "procedure"
+  },
+  {
+   "w": "application",
+   "p": "n",
+   "ko": "신청서, 지원서",
+   "d": "a formal written request, especially for a job or a place in a school",
+   "e": "Applications for the job should be made to the Personnel Manager.",
+   "f": "Applications"
+  },
+  {
+   "w": "clumsy",
+   "p": "adj",
+   "ko": "서투른, 덜렁대는",
+   "d": "moving in an awkward way and tending to make things fall over",
+   "e": "She is so clumsy, so she keeps falling over.",
+   "f": "clumsy"
+  },
+  {
+   "w": "conductor",
+   "p": "n",
+   "ko": "지휘자",
+   "d": "a person who stands in front of an orchestra and directs the musicians",
+   "e": "Please find a conductor for our orchestra.",
+   "f": "conductor"
+  },
+  {
+   "w": "contour",
+   "p": "n",
+   "ko": "윤곽",
+   "d": "the shape of the outer surface of something",
+   "e": "The contours of the mountain look dangerous.",
+   "f": "contours"
+  },
+  {
+   "w": "current",
+   "p": "adj",
+   "s": 1,
+   "ko": "현재의",
+   "d": "of the present time; happening now",
+   "e": "My current landlord is a good person.",
+   "f": "current"
+  },
+  {
+   "w": "ironic",
+   "p": "adj",
+   "s": 1,
+   "ko": "반어적인, 비꼬는",
+   "d": "meaning the opposite of what you say",
+   "e": "Jeff sometimes offends people with his ironic sense of humor.",
+   "f": "ironic"
+  },
+  {
+   "w": "penthouse",
+   "p": "n",
+   "ko": "펜트하우스 (꼭대기 층 고급 아파트)",
+   "d": "an expensive flat at the top of a tall building",
+   "e": "Penthouses are expensive to buy.",
+   "f": "Penthouses"
+  },
+  {
+   "w": "union",
+   "p": "n",
+   "s": 1,
+   "ko": "결합, 연합",
+   "d": "the action of joining",
+   "e": "Marriage is the union of two people.",
+   "f": "union"
+  },
+  {
+   "w": "drunken",
+   "p": "adj",
+   "ko": "술 취한",
+   "d": "having drunk too much alcohol",
+   "e": "Drunken people shouted loudly.",
+   "f": "Drunken"
+  },
+  {
+   "w": "fed up",
+   "p": "adj",
+   "ko": "싫증 난, 지긋지긋한",
+   "d": "bored or unhappy; tired of something",
+   "e": "What's the matter? You look really fed up.",
+   "f": "fed up"
+  },
+  {
+   "w": "bored",
+   "p": "adj",
+   "s": 1,
+   "ko": "지루해하는",
+   "d": "tired because you're not interested in something",
+   "e": "There was a bored expression on her face.",
+   "f": "bored"
+  },
+  {
+   "w": "offense",
+   "p": "n",
+   "ko": "범죄, 위반",
+   "d": "a crime",
+   "e": "It is an serious offense to steal something.",
+   "f": "offense"
+  },
+  {
+   "w": "possession",
+   "p": "n",
+   "ko": "소유",
+   "d": "the state of having or owning something",
+   "e": "The gang were caught in possession of stolen goods.",
+   "f": "possession"
+  },
+  {
+   "w": "engagement",
+   "p": "n",
+   "s": 1,
+   "ko": "약혼, 약속",
+   "d": "1. agreement to get married 2. an arrangement to go somewhere or do something at a fixed time; an appointment",
+   "e": "He broke off their engagement.",
+   "f": "engagement",
+   "e2": "We made an engagement to go fishing."
+  },
+  {
+   "w": "interim",
+   "p": "adj",
+   "s": 1,
+   "ko": "임시의, 중간의",
+   "d": "not final or lasting; temporary until somebody/something more permanent is found",
+   "e": "We made an interim arrangement.",
+   "f": "interim"
+  },
+  {
+   "w": "peace",
+   "p": "n",
+   "s": 1,
+   "ko": "평화",
+   "d": "a situation or a period of time in which there is no war or violence in a country or area",
+   "e": "The two communities now managed to live in peace together.",
+   "f": "peace"
+  },
+  {
+   "w": "theory",
+   "p": "n",
+   "s": 1,
+   "ko": "이론",
+   "d": "an idea that tries to explain something",
+   "e": "This is the theory about how life on earth began.",
+   "f": "theory"
+  },
+  {
+   "w": "donor",
+   "p": "n",
+   "ko": "기증자, 헌혈자",
+   "d": "a person who gives blood or a part of his/her own body for medical use",
+   "e": "It's hard to find a youth donor.",
+   "f": "donor"
+  },
+  {
+   "w": "expertise",
+   "p": "n",
+   "s": 1,
+   "ko": "전문 지식, 전문 기술",
+   "d": "a high level of special knowledge or skill",
+   "e": "I was amazed at his expertise on the word processor.",
+   "f": "expertise"
+  }
+ ]
+}
