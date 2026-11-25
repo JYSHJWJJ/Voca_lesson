@@ -1,0 +1,176 @@
+{
+ "n": 21,
+ "title": "Lesson 21",
+ "book": "Voca 10000 · Words in English",
+ "words": [
+  {
+   "w": "park",
+   "p": "v",
+   "s": 1,
+   "ko": "주차하다",
+   "d": "to leave the vehicle that you are driving somewhere for a period of time",
+   "e": "You can't park in the center of town.",
+   "f": "park"
+  },
+  {
+   "w": "southern",
+   "p": "adj",
+   "ko": "남쪽의, 남부의",
+   "d": "on, in or from the south of a place",
+   "e": "Greece is in Southern Europe.",
+   "f": "Southern"
+  },
+  {
+   "w": "circumstance",
+   "p": "n",
+   "ko": "상황, 환경",
+   "d": "the facts and events that affect what happens in a particular situation",
+   "e": "The plan works better in normal circumstances.",
+   "f": "circumstances"
+  },
+  {
+   "w": "approach",
+   "p": "v",
+   "s": 1,
+   "ko": "접근하다, 다가가다",
+   "d": "to come near or closer to someone/something",
+   "e": "When you approach the village, you will see a garage on your left.",
+   "f": "approach"
+  },
+  {
+   "w": "complaint",
+   "p": "n",
+   "s": 1,
+   "ko": "불평, 항의",
+   "d": "a statement that you are not satisfied with something",
+   "e": "You should make a complaint to the company that made the machine.",
+   "f": "complaint"
+  },
+  {
+   "w": "consequence",
+   "p": "n",
+   "ko": "결과",
+   "d": "something that happens or follows as a result of something else",
+   "e": "Many people may lose their jobs as a consequence of recent poor sales.",
+   "f": "consequence"
+  },
+  {
+   "w": "creative",
+   "p": "adj",
+   "s": 1,
+   "ko": "창의적인",
+   "d": "using skill to make or do new things",
+   "e": "She is a very creative designer.",
+   "f": "creative"
+  },
+  {
+   "w": "deduce",
+   "p": "v",
+   "ko": "추론하다",
+   "d": "to make an opinion using the facts that you already know",
+   "e": "From his name I deduced that he was Polish.",
+   "f": "deduced"
+  },
+  {
+   "w": "deserve",
+   "p": "v",
+   "s": 1,
+   "ko": "~할 만하다, ~을 받을 자격이 있다",
+   "d": "to earn something, either good or bad, because of something that you have done",
+   "e": "She deserves to be punished because she stole my pen.",
+   "f": "deserves"
+  },
+  {
+   "w": "director",
+   "p": "n",
+   "s": 1,
+   "ko": "책임자, 이사",
+   "d": "a person who manages or controls a company or organization",
+   "e": "Rolls Royce is the managing director of this company.",
+   "f": "director"
+  },
+  {
+   "w": "pithy",
+   "p": "adj",
+   "ko": "간결하고 핵심을 찌르는",
+   "d": "expressed in a clear and direct way",
+   "e": "She made a pithy comment.",
+   "f": "pithy"
+  },
+  {
+   "w": "efficient",
+   "p": "adj",
+   "s": 1,
+   "ko": "효율적인",
+   "d": "able to work well without making mistakes or wasting time and energy",
+   "e": "We try to provide efficient service.",
+   "f": "efficient"
+  },
+  {
+   "w": "immune",
+   "p": "adj",
+   "ko": "면역이 있는",
+   "d": "having natural protection against a certain disease or illness",
+   "e": "Our body is not immune to disease.",
+   "f": "immune"
+  },
+  {
+   "w": "overtake",
+   "p": "v",
+   "ko": "추월하다, 앞지르다",
+   "d": "to go past another person because you are moving faster",
+   "e": "He increased his speed to overtake the bus.",
+   "f": "overtake"
+  },
+  {
+   "w": "savage",
+   "p": "adj",
+   "ko": "잔인한, 사나운",
+   "d": "very cruel or violent",
+   "e": "He was the victim of a savage attack.",
+   "f": "savage"
+  },
+  {
+   "w": "estimate",
+   "p": "n",
+   "s": 1,
+   "ko": "추정, 견적",
+   "d": "judgement about the size, cost, etc. of something",
+   "e": "Can you give me a rough estimate of how many people will be at the meeting?",
+   "f": "estimate"
+  },
+  {
+   "w": "logical",
+   "p": "adj",
+   "ko": "논리적인, 타당한",
+   "d": "1. seeming natural, reasonable or sensible 2. thinking in a sensible way",
+   "e": "We need to think in a logical way.",
+   "f": "logical"
+  },
+  {
+   "w": "petty",
+   "p": "adj",
+   "ko": "사소한, 하찮은",
+   "d": "small and unimportant",
+   "e": "He didn't want to get involved with the petty details.",
+   "f": "petty"
+  },
+  {
+   "w": "wealthy",
+   "p": "adj",
+   "s": 1,
+   "ko": "부유한",
+   "d": "having a lot of money, property, etc.",
+   "e": "They are a wealthy family.",
+   "f": "wealthy"
+  },
+  {
+   "w": "earnings",
+   "p": "n",
+   "ko": "소득, 수입",
+   "d": "the money that a person earns by working",
+   "e": "Average earnings have increased by 5%.",
+   "f": "earnings"
+  }
+ ]
+}
